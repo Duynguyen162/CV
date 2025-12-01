@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Nguyen Duy - Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-gray: #f4f6f8;
+            --sidebar-width: 280px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #555;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .cv-container {
+            width: 210mm;
+            min-height: 297mm;
+            background: #fff;
+            display: grid;
+            grid-template-columns: var(--sidebar-width) 1fr;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* XÓA avatar-placeholder */
+        .sidebar h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .contact-info div {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .contact-info i {
+            width: 15px;
+            color: var(--accent-color);
+        }
+
+        .skill-group {
+            margin-bottom: 15px;
+        }
+
+        .skill-group h3 {
+            font-size: 14px;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 5px;
+            font-size: 13px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Main content */
+        .main-content {
+            padding: 40px 30px;
+        }
+
+        .header-name h1 {
+            font-size: 32px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .header-name h2 {
+            font-size: 18px;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .goal-text {
+            text-align: justify;
+            font-size: 14px;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .project-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .project-role {
+            font-style: italic;
+            color: #666;
+            font-size: 13px;
+        }
+
+        .tech-stack {
+            font-size: 13px;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .project-desc ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .project-desc li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            text-align: justify;
+        }
+
+        .project-desc li::before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .cv-container {
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+            }
+
+            .sidebar {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv-container">
+        <aside class="sidebar">
+
+            <!-- Avatar đã bị xóa -->
+
+            <div class="contact">
+                <h2>Thông tin liên hệ</h2>
+                <div class="contact-info">
+                    <div>
+                        <i class="fas fa-calendar"></i>
+                        <span>16/02/2004 (Nam)</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>0389235204</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span style="word-break: break-all;">duynguyen162204@gmail.com</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ba Vì, Hà Nội</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education">
+                <h2>Học vấn</h2>
+                <div class="skill-group">
+                    <h3 style="color: #fff; font-weight: 700;">Đại học Thủy Lợi</h3>
+                    <p style="font-size: 13px; margin-top: 5px;">Chuyên ngành: Kĩ thuật phần mềm</p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h2>Kỹ năng</h2>
+
+                <div class="skill-group">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>React, TypeScript</li>
+                        <li>React Router, Hooks</li>
+                        <li>SCSS Module, Responsive</li>
+                        <li>Tippy.js, Font Awesome</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>API Handling</h3>
+                    <ul class="skill-list">
+                        <li>Fetch API / Axios (GET, POST, PUT, DELETE)</li>
+                        <li>Xử lý bất đồng bộ: async/await</li>
+                        <li>Error handling, loading UI</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Backend & DB</h3>
+                    <ul class="skill-list">
+                        <li>Node.js / Express (Basic CRUD)</li>
+                        <li>MySQL: thiết kế bảng & truy vấn cơ bản</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Tools & Others</h3>
+                    <ul class="skill-list">
+                        <li>Git, VS Code, Figma</li>
+                        <li>Media/Audio Handling</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Ngoại ngữ</h3>
+                    <ul class="skill-list">
+                        <li>Tiếng Anh: TOEIC ~500, đang học nâng cao</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="hobbies">
+                <h2>Sở thích</h2>
+                <ul class="skill-list">
+                    <li>game: PUBG, liên quân</li>
+                    <li>Chơi thể thao: đá bóng, cầu lông</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header-name">
+                <h1>Nguyễn Quang Duy</h1>
+                <h2>Front-end Developer</h2>
+            </header>
+
+            <section class="section">
+                <h3 class="section-title">Mục tiêu nghề nghiệp</h3>
+                <p class="goal-text">
+                    Mong muốn phát triển chuyên sâu kỹ năng Frontend và dần mở rộng sang Fullstack. Mục tiêu xây dựng
+                    các ứng dụng web hiện đại, tối ưu trải nghiệm người dùng và học hỏi backend để trở thành lập trình
+                    viên Fullstack toàn diện.
+                </p>
+            </section>
+
+            <section class="section">
+                <h3 class="section-title">Dự án tiêu biểu</h3>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-name">ZING MP3 CLONE</span>
+                        <span class="project-role">Frontend Developer (Intern)</span>
+                    </div>
+                    <div style="font-size: 13px; margin-top: 5px;">
+                        <strong>Live Demo:</strong>
+                        <a href="https://duynguyen162.github.io/Zingmp3_Run/#/" target="_blank">Demo</a> |
+                        <strong>Code:</strong>
+                        <a href="https://github.com/Duynguyen162/zingmp3" target="_blank">Github</a>
+                    </div>
+                    <div class="tech-stack">
+                        Technologies: TypeScript, ReactJS, Context, SCSS Module, Tippy.js
+                    </div>
+                    <div class="project-desc">
+                        <p style="font-style: italic; margin-bottom: 5px;">Ứng dụng nghe nhạc mô phỏng Zing MP3.</p>
+                        <ul>
+                            <li>Tính năng Player: Play/Pause, Next/Prev, Repeat, Shuffle.</li>
+                            <li>UI Responsive, SCSS Module.</li>
+                            <li>Routing đa cấp, quản lý state bằng Context, useEffect, useRef.</li>
+                            <li>Tối ưu render danh sách nhạc.</li>
+                            <li>Xử lý Audio HTML5: tua nhạc, âm lượng, auto-next.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section">
+                <h3 class="section-title">Kỹ năng mềm</h3>
+                <ul style="padding-left: 20px; font-size: 14px; line-height: 1.8;">
+                    <li>Tự học và thích nghi nhanh.</li>
+                    <li>Giải quyết vấn đề.</li>
+                    <li>Giao tiếp và làm việc nhóm.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<button id="downloadPdf" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding:10px 20px;">
+    Tải CV PDF
+</button>
+
+<script>
+    document.getElementById("downloadPdf").addEventListener("click", async () => {
+        const { jsPDF } = window.jspdf;
+        const cv = document.querySelector('.cv-container');
+
+        const canvas = await html2canvas(cv, {
+            scale: 1.2,
+            useCORS: true
+        });
+
+        const imgData = canvas.toDataURL("image/webp", 0.7);
+
+        const pdfWidth = 210;
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+        const pdf = new jsPDF({
+            orientation: 'p',
+            unit: 'mm',
+            format: [pdfWidth, pdfHeight]
+        });
+
+        pdf.addImage(imgData, "WEBP", 0, 0, pdfWidth, pdfHeight);
+        pdf.save("CV_NguyenDuy.pdf");
+    });
+</script>
+
+</html>
